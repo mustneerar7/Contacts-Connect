@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Contacts_Connect.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Contacts_Connect"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+
+            <TextBlock Text="Dashboard" FontSize="32" Padding="16,16,0,4" FontWeight="SemiBold"/>
+            <TextBlock Text="This app connects to an SQL server database and reads and writes to the table." Padding="16,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Padding="16,30,0,0">
+                <TextBox x:Name="lastNameTextBox" Width="240" PlaceholderText="Enter last name" Height="24px"/>
+                <Button x:Name="lastNameSearchButton" Content="Search Entries" Margin="8,0,0,0" Click="lastNameSearchButton_Click"/>
+                <Button x:Name="listViewResetButton" Content="&#xE845;" FontFamily="Segoe Fluent Icons" Margin="8,0,0,0" Click="listViewResetButton_Click" Height="32px" ToolTipService.ToolTip="Reset"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="16">
+                <ListBox x:Name="ContactsListBox" Height="200"/>
+                <Button x:Name="createNewContactButton" Content="Add a contact" Margin="0,16,0,0" Click="createNewContactButton_Click"/>
+            </StackPanel>
+           
+        </StackPanel>
+    </Grid>
+</Page>
